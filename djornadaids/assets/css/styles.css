@@ -1,0 +1,582 @@
+/*
+Estilos del dashboard
+*/
+
+/*Generales*/
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.Symbols-Signs{
+    font-family: 'Symbols-Signs';
+}
+
+
+/*aside options Page*/
+.wrap-dashboard{
+    height: auto;
+}
+
+.wrap-dashboard aside,
+.wrap-dashboard #user-bar{
+    float: left;
+}
+
+.wrap-dashboard aside{
+    background: transparent;
+    width: 6%;
+    padding: 1%;
+    padding-top: 0;    
+    transition: ease 200ms;
+    position: absolute;
+}
+
+.wrap-dashboard aside #options-head{
+    color: #808b8e;
+}
+
+.wrap-dashboard aside:hover{
+    background: white;
+    width: 20%;
+    min-height: 100vh;
+    box-shadow: 0px 0px 5px #555;
+    z-index: 2;
+}
+
+.wrap-dashboard aside:hover button{
+    display: none;
+}
+
+.wrap-dashboard aside:hover ul{
+    width: 100%;
+    display: block;
+}
+
+.wrap-dashboard aside:hover #options-head img{
+    display: block;
+}
+
+.wrap-dashboard aside #options-head button{
+    font-size: 2.5rem;
+    margin-bottom: 3%;
+    color: white;
+}
+
+.wrap-dashboard aside #options-head img{
+    display: none;
+    width: 120%;
+    margin: auto;
+    margin-left: -15%;
+}
+
+.wrap-dashboard aside ul{
+    display: none;
+}
+
+.wrap-dashboard aside ul li{
+    padding: 2%;
+    margin-bottom: 10%;
+    transition: all 250ms;
+}
+
+.wrap-dashboard aside ul li:hover{
+    padding-left: 10%;
+    animation: none;
+    border-left: 3px groove #beccf9;
+}
+
+.wrap-dashboard aside ul li a{
+    font-size: 1.1rem;
+}
+
+.wrap-dashboard aside ul li:hover a{
+    color: #808b8e;
+}
+
+.wrap-dashboard aside ul li a span{
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+/*Username bar*/
+.wrap-dashboard #user-bar{
+    background: #2f313e;
+    width: 100%;
+    padding: 1%;
+    height: 11.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrap-dashboard #user-bar #user-icon{
+    margin-right: 1%;
+    fill: white;
+    display: block;
+    width: 2.5%;
+}
+
+.wrap-dashboard #user-bar #nombre-usuario{
+    color: white;
+    margin-right: 2%;
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
+/*main-dashboard*/
+#main-dashboard{    
+    width: 100%;
+}
+
+#main-dashboard .panel-description{
+    height: 5%;
+    width: 100%;
+    padding: 1%;
+}
+
+#main-dashboard .panel-description #main-panel{
+    padding-left: 3%;
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
+#main-dashboard section{
+    background: #eef1f6;  
+    height: 90vh;
+    box-shadow: 0px 0px 3px #2f313e;
+}
+
+#main-dashboard section form{
+    padding-top: 10%;
+}
+
+#main-dashboard section form #fichar-entrada,
+#main-dashboard section form #fichar-salida{
+    margin: auto;
+    width: 20%;
+    padding: 2%;
+    background: #28a745;
+    box-shadow: 0px 0px 3px #2f313e;
+    transition: ease 250ms;
+    cursor: pointer;
+}
+
+#main-dashboard section form #fichar-salida{
+    background: #08c;
+}
+
+#main-dashboard section form #fichar-entrada:hover,
+#main-dashboard section form #fichar-salida:hover{
+    transform: scale(1.03, 1.03);
+}
+
+#main-dashboard section form #fichar-entrada span,
+#main-dashboard section form #fichar-salida span{
+    margin-left: 5%;
+    margin-right: 3%;
+}
+
+#main-dashboard section form #fichar-entrada input,
+#main-dashboard section form #fichar-salida input{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Merriweather';
+    margin-left: 11%;
+}
+
+#main-dashboard section form #fichar-entrada,
+#main-dashboard section form #fichar-salida,
+#main-dashboard section form #status-work{
+    float: left;
+}
+
+#main-dashboard section form #fichar-entrada,
+#main-dashboard section form #fichar-salida{
+    margin-left: 30%;
+    margin-right: 5%;
+}
+
+#main-dashboard section form #status-work #status-working,
+#main-dashboard section form #status-work p,
+#main-dashboard section form #status-work #system-time{
+    font-family: 'Merriweather';
+}
+
+#main-dashboard section form #status-work span,
+#main-dashboard section form #status-work p,
+#main-dashboard section form #status-work #system-time{
+    text-align: center;
+}
+
+#main-dashboard section form #status-work .webSymbols{
+    margin-left: 10%;
+}
+
+#main-dashboard section form #status-work #system-time{
+    color: #a445b2;
+}
+
+@keyframes blinkWorking{
+    from{
+        color: #28a745;
+    }
+    
+    to{
+        color: #212529;
+    }
+}
+
+#main-dashboard section form #status-work #status-working,
+#main-dashboard section form #status-work #work-symbol{
+    animation: blinkWorking 350ms infinite;
+}
+
+#main-dashboard section form #status-work{
+    margin-bottom: 5%;
+}
+
+#main-dashboard section form input,
+#main-dashboard section form label{
+    float: left;
+    font-family: 'Merriweather';
+}
+
+#main-dashboard section form #first-type-signing{
+    margin-left: 40%;
+}
+
+#main-dashboard section form input{
+    margin-right: 0.5%;
+}
+
+#main-dashboard section form label{
+    margin-right: 3%;
+}
+
+/*===============================================================================*/
+/*ESTILOS DEL PROFILE PAGE*/
+/*===============================================================================*/
+
+.profile-page-wrap{
+    padding: 3%;
+    background: #eef1f6;
+    min-height: 91vh;
+    box-shadow: 0px 0px 3px #2f313e;
+    
+}
+
+.profile-page-wrap .form-profile{
+    margin: auto;
+    padding: 2%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    width: 55%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 0px 3px #555;
+}
+
+.profile-page-wrap .form-profile .form-header-update{
+    border-bottom: 1px groove #ccc;
+    padding-bottom: 1%;
+}
+
+.profile-page-wrap .form-profile .form-header-update h1{
+    font-size: 1.8rem;
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
+.profile-page-wrap .form-profile .form-header-update > p{
+    font-family: 'Merriweather';
+}
+
+.profile-page-wrap .form-profile .personal-data{
+    padding: 2%;
+    display: flex;
+    /*flex-grow: 0.5;*/
+    flex-flow: wrap;
+    border-radius: 5px;
+    border: 1px dashed #bd4147;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.profile-page-wrap .form-profile .personal-data .data-container{
+    margin-left: 10%;
+    margin-right: 3%;
+    padding: 0;
+}
+
+.profile-page-wrap .form-profile .personal-data label{
+    font-family: 'Merriweather';
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.profile-page-wrap .form-profile .personal-data input[type="text"],
+.profile-page-wrap .form-profile .personal-data input[type="password"]{
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #555;
+    outline: none;
+    margin-bottom: 5%;
+    font-family: 'Merriweather';
+}
+
+.profile-page-wrap .form-profile .personal-data .data-container .webSymbols{
+    display: block;
+    font-size: 0.7rem;
+    margin-top: -2.3rem;
+    margin-left: 13.3rem;
+}
+
+/*========================================================================*/
+.profile-page-wrap .form-profile .seleccion-horario{
+    padding: 2%;
+    padding-top: 5%;
+    display: flex;
+    flex-flow: wrap;
+    border: 1px dashed #08c;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+
+.profile-page-wrap .form-profile .seleccion-horario label{
+    font-family: 'Merriweather';
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.profile-page-wrap .form-profile .seleccion-horario select{
+    padding: 1.5%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #555;
+    outline: none;
+    font-family: 'Merriweather';
+    margin-bottom: 10%;
+}
+
+/*========================================================================*/
+
+.profile-page-wrap .form-profile .identity-data{
+    padding: 2%;
+    padding-top: 5%;
+    display: flex;
+    flex-flow: wrap;
+    border: 1px dashed gray;
+    border-radius: 5px;
+}
+
+.profile-page-wrap .form-profile .identity-data .data-container{
+    margin-left: 10%;
+    margin-right: 3%;
+}
+
+.profile-page-wrap .form-profile .identity-data label{
+    font-family: 'Merriweather';
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.profile-page-wrap .form-profile .identity-data input{
+    padding: 1.5%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #555;
+    outline: none;
+    font-family: 'Merriweather';
+    margin-bottom: 10%;
+}
+
+.profile-page-wrap .form-profile input[type="submit"]{
+    width: 30%;
+    margin: auto;
+    margin-top: 3%;
+    background: #bd4147;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #555;
+    cursor: pointer;
+    color: white;
+    padding: 1%;
+    font-family: 'Merriweather';
+    transition: all 250ms;
+}
+
+.profile-page-wrap .form-profile input[type="submit"]:hover{
+    transform: scale(1.015, 1.015);
+    background: white;
+    box-shadow: 0px 0px 5px #bd4147;
+    color: black;
+}
+
+/*==========================================================================================*/
+/*Update status notification*/
+.update-bad,
+.update-ok{
+    text-align: center;
+    padding-top: 1.5%;
+    color: #bd4147;
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+
+.update-ok{
+    color: #28a745;
+}
+
+/*===========================================================================================*/
+/*Loading page*/
+.jm-loadingpage {
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 999999999;
+ background: url(../images/ajax-loader.gif) center no-repeat #fff;
+}
+/*Loading page*/
+
+/*=============================================================================================*/
+/*show Jornadas Page*/
+.download-jornadas-wrap{
+    padding: 5%;
+    background: #eef1f6;
+    min-height: 91vh;
+    box-shadow: 0px 0px 3px #2f313e;
+}
+
+.download-jornadas-wrap a{
+    float: left;
+    display: block;
+    width: 20%;
+    padding: 2%;
+    text-align: center;
+    font-family: 'Merriweather';
+    color: black;
+    background: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px #555;
+    margin: 10px;
+}
+
+.download-jornadas-wrap a:hover{
+    transform: scale(1.02, 1.02);
+}
+
+.download-jornadas-wrap a img{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+/*SELECT DE HORARIO BASE*/
+.select-horario-base{
+    display: none;
+    width: 50%;
+    margin: auto;
+    margin-top: 4%;
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #555;
+    background: white;
+    transition: ease-out 300ms;
+}
+
+@keyframes showSlow{
+    0%{
+        transform: scale(1.5, 1.5);
+    }
+    
+    25%{
+        transform: scale(1, 1);
+    }
+    
+    50%{
+        transform: scale(1.2, 1.2);
+    }
+    
+    100%{
+        transform: scale(1, 1);
+    }
+}
+
+.select-horario-base select{
+    margin: auto;
+    margin-left: 12%;
+    width: 80%;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.warningMessages{
+    display: none;
+    width: 40%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 1%;
+    text-align: center;
+    font-size: 90%;
+    background: #EDD2CB;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #555;
+}
+
+/* Loading Reporte */
+.loadingReporte{
+    display: none;
+    background: rgba(163, 157, 157, 0.901);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 800px;
+}
+
+.loadingReporte .webSymbols{
+    position: absolute;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 620px;
+    color: #22A5F1;
+    text-shadow: 0px 0px 3px black;
+    font-weight: bold;
+    font-size: 80px;
+    transform: rotate(90deg);
+    animation: rotateLoad 2s infinite;
+    transition: all 500ms;
+}
+
+@keyframes rotateLoad{
+    0%{
+        transform: rotate(90deg);
+    }
+    25%{
+        transform: rotate(180deg);
+    }
+    50%{
+        transform: rotate(271deg);
+    }
+    75%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(450deg);
+    }
+}
+
+.loadingReporte .loadingText {
+    margin: auto;
+    text-align: center;
+    margin-top: 350px;
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
