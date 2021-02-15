@@ -143,9 +143,9 @@ class jornadaController{
         //Datos para el reporte
 
         //Datos de empresa
-        $empresa = 'IDS SOPORTE Y ASISTENCIA TECNICA, S.L.';
-        $cif = 'B63332159';
-        $cuenta_cotizacion = '8142385720';
+        $empresa = 'any';
+        $cif = 'any';
+        $cuenta_cotizacion = 'any';
 
         //Datos del trabajador
         $username = $_SESSION['identity']->username;
