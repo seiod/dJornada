@@ -1,5 +1,5 @@
 <?php
-define('base_url', 'http://www.seiod.com/djornadaids/');
+define('base_url', '');
 
 define('controller_default', 'usuarioController');
 
